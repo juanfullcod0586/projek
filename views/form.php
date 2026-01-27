@@ -1,14 +1,14 @@
-<h2>Tambah Buku</h2>
+<h2>Tambah Mahasiswa</h2>
 
 <form method="post">
-    <input type="text" name="Judul" placeholder="Input Judul" /> <br /><br />
-    <input type="text" name="Penulis" placeholder="Input Penulis" /> <br /><br />
-    <input type="text" name="Terbit" placeholder="Input Terbit" /> <br /><br />
-    <input type="text" name="TipeBuku" placeholder="Input TipeBuku" /> <br /><br />
-    <select name="StatusBuku">
-        <option>tersedia</option>
-        <option>dipinjam</option>
+    <input type="text" name="nama" placeholder="Input nama" /> <br/><br/>
+    <input type="text" name="kelas" placeholder="Input kelas" /> <br/><br/>
+    <input type="text" name="nilai" placeholder="Input nilai" /> <br/><br/>
+    <input type="text" name="umur" placeholder="Input umur" /> <br/><br/>
+    <select name="jenisKelamin">
+        <option>Pria</option>
+        <option>Wanita</option>
     </select>
-    <br /><br />
+    <br/><br/>
     <button type="submit">Simpan</button>
 </form>
