@@ -1,13 +1,18 @@
 <h2>Edit Mahasiswa - Nomor: #<?= $paramURLID ?></h2>
 
 <form method="post">
-    <input type="text" name="Judul" placeholder="Input Judul" value="<?= $dataByID['nama'] ?>" /> <br /><br />
-    <input type="text" name="kelas" placeholder="Input kelas" value="<?= $dataByID['kelas'] ?>" /> <br /><br />
-    <input type="text" name="nilai" placeholder="Input nilai" value="<?= $dataByID['nilai'] ?>" /> <br /><br />
-    <input type="text" name="umur" placeholder="Input umur" value="<?= $dataByID['umur'] ?>" /> <br /><br />
-    <select name="jenisKelamin">
-        <option <?= $dataByID['jenisKelamin'] === "Pria" ? "selected" : "" ?>>Pria</option>
-        <option <?= $dataByID['jenisKelamin'] === "Wanita" ? "selected" : "" ?>>Wanita</option>
+    <input type="text" name="Judul" placeholder="Input Judul" value="<?= $dataByID['Judul'] ?>" /> <br /><br />
+    <input type="text" name="penulis" placeholder="Input Penulis" value="<?= $dataByID['Penulis'] ?>" /> <br /><br />
+    <input type="text" name="TahunTerbit" placeholder="Input Tahun Terbit" value="<?= $dataByID['TahunTerbit'] ?>" /> <br /><br />
+
+    <select name="jenisBuku">
+        <option <?= $dataByID['jenisBuku'] === "Biasa" ? "selected" : "" ?>>Biasa</option>
+        <option <?= $dataByID['jenisBuku'] === "Referensi" ? "selected" : "" ?>>Refrensi</option>
+    </select>
+    <br /><br />
+    <select name="StatusBuku">
+        <option <?= $dataByID['statusBuku'] === "dipinjam" ? "selected" : "" ?>>Dipinjam</option>
+        <option <?= $dataByID['statusBuku'] === "Tersedia" ? "selected" : "" ?>>Tersedia</option>
     </select>
     <br /><br />
     <button type="submit">Simpan</button>

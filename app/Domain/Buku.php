@@ -1,46 +1,43 @@
 <?php
-
-abstract class Buku 
+class buku
 {
-    protected string $judul;
-    protected string $penulis;
-    protected int $terbit;
-    protected string $Tipebuku;
-    protected string $StatusBuku;
+    protected string $Judul;
+    protected string $Penulis;
+    protected int $TahunTerbit;
+    protected string $jenisBuku;
+    protected string $statusBuku;
 
-    public function __construct(string $judul, string $penulis, int $terbit,string $TipeBuku string $StatusBuku)
+    public function __construct(string $Judul, string $Penulis, int $TahunTerbit, string $jenisBuku, string $statusBuku)
     {
-        $this->judul = $judul;
-        $this->penulis = $penulis;
-        $this->terbit = $terbit;
-        $this->TipeBuku = $TipeBuku;
-        $this->StatusBuku = $StatusBuku;
+        $this->Judul = $Judul;
+        $this->Penulis = $Penulis;
+        $this->TahunTerbit = $TahunTerbit;
+        $this->jenisBuku = $jenisBuku;
+        $this->statusBuku = $statusBuku;
     }
 
     // GETTER
-    public function getJudul(): string {
-        return $this->judul;
+    public function getJudul(): string
+    {
+        return $this->Judul;
     }
 
-    public function getPenulis(): string {
-        return $this->penulis;
+    public function getPenulis(): string
+    {
+        return $this->Penulis;
     }
 
-    public function getTerbit(): int {
-        return $this->terbit;
+    public function getTahunTerbit(): int
+    {
+        return $this->TahunTerbit;
     }
 
-    public function getTipeBuku(): string {
-        return $this->Tipebuku;
+    public function getJenisBuku(): string
+    {
+        return $this->jenisBuku;
     }
-
-    public function getStatusbuku(): string {
-        return $this->StatusBuku;
+    public function getstatusBuku(): string
+    {
+        return $this->statusBuku;
     }
-
-    // SETTER
-   
-
-    // Polymorphism
-    abstract public function getStatus(): string;
 }
