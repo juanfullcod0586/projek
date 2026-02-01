@@ -10,13 +10,13 @@ $service = new BukuService($storage);
 $helper = new General();
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
-    $buku = new buku($_POST['Judul'], $_POST['Penulis'], $_POST['TahunTerbit'], $_POST['jenisBuku'], $_POST['statusBuku']);
+    $buku = new buku($_POST['Judul'], $_POST['TahunTerbit'], $_POST['jenisBuku']);
     $binding = [
         'Judul' => $buku->getJudul(),
-        'Penulis' => $buku->getPenulis(),
+
         'TahunTerbit' => $buku->getTahunTerbit(),
         'jenisBuku' => $buku->getJenisBuku(),
-        'statusBuku' => $buku->getstatusBuku(),
+
     ];
 
     $service->add($binding);

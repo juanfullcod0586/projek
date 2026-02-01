@@ -2,7 +2,7 @@
 
 <form method="post">
     <input type="text" name="Judul" placeholder="Input Judul" value="<?= $dataByID['Judul'] ?>" /> <br /><br />
-    <input type="text" name="penulis" placeholder="Input Penulis" value="<?= $dataByID['Penulis'] ?>" /> <br /><br />
+
     <input type="text" name="TahunTerbit" placeholder="Input Tahun Terbit" value="<?= $dataByID['TahunTerbit'] ?>" /> <br /><br />
 
     <select name="jenisBuku">
@@ -10,10 +10,6 @@
         <option <?= $dataByID['jenisBuku'] === "Referensi" ? "selected" : "" ?>>Refrensi</option>
     </select>
     <br /><br />
-    <select name="StatusBuku">
-        <option <?= $dataByID['statusBuku'] === "dipinjam" ? "selected" : "" ?>>Dipinjam</option>
-        <option <?= $dataByID['statusBuku'] === "Tersedia" ? "selected" : "" ?>>Tersedia</option>
-    </select>
-    <br /><br />
+
     <button type="submit">Simpan</button>
 </form>
