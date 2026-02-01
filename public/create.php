@@ -1,23 +1,23 @@
-<?php 
+<?php
 
-require_once "../app/Domain/Mahasiswa.php";
+require_once "../app/Domain/buku.php";
 require_once "../app/Storage/JSONStorage.php";
-require_once "../app/Services/MahasiswaService.php";
+require_once "../app/Services/BukuService.php";
 require_once "../app/Helpers/General.php";
 
-$storage = new JSONStorage('../storage/mahasiswa.json');
-$service = new MahasiswaService($storage);
+$storage = new JSONStorage('../storage/Buku.json');
+$service = new BukuService($storage);
 $helper = new General();
 
-if ($_SERVER['REQUEST_METHOD'] === "POST"){
-    $mahasiswa = new Mahasiswa($_POST['nilai'], $_POST['kelas'], $_POST['nama'], 'surabaya', $_POST['umur'], $_POST['jenisKelamin']);
+if ($_SERVER['REQUEST_METHOD'] === "POST") {
+    $buku = new buku($_POST['Judul'], $_POST['Penulis'], $_POST['TahunTerbit'], $_POST['jenisBuku'], $_POST['StatusBuku']);
     $binding = [
-        'nama' => $mahasiswa->getNama(),
-        'kelas' => $mahasiswa->getKelas(),
-        'nilai' => $mahasiswa->getNilai(),
-        'alamat' => $mahasiswa->getAlamat(),
-        'umur' => $mahasiswa->getUmur(),
-        'jenisKelamin' => $mahasiswa->getJenisKelamin(),
+        'Judul' => $buku->getJudul(),
+        'Penulis' => $buku->getPenulis(),
+        'TahunTerbit' => $buku->getTahunTerbit(),
+        'jenisBuku' => $buku->getJenisBuku(),
+        'StatusBuku' => $buku->getStatusBuku(),
+
     ];
 
     $service->add($binding);

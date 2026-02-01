@@ -1,10 +1,11 @@
-<?php 
+<?php
 
+require_once "../app/Domain/buku.php";
 require_once "../app/Storage/JSONStorage.php";
-require_once "../app/Services/MahasiswaService.php";
+require_once "../app/Services/BukuService.php";
 
-$storage = new JSONStorage('../storage/mahasiswa.json');
-$service = new MahasiswaService($storage);
+$storage = new JSONStorage('../storage/Buku.json');
+$service = new BukuService($storage);
 
 $data = $service->getAll();
 $content = "";
