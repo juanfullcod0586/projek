@@ -30,6 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $helper->redirectTo('index.php');
 }
 
+if ($jenisBuku === 'Refrensi' && $StatusBuku == 'dipinjam') {
+    echo "<script>alert('Buku Refrensi tidak boleh dipinjam');
+    window.locatian.href='edit.php?id=$paramulid';</script>";
+    exit;
+}
+
 ob_start();
 
 require "../views/edit.php";
