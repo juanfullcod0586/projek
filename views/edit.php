@@ -18,3 +18,22 @@
 
     <button type="submit">Simpan</button>
 </form>
+
+<script>
+    const jenisBuku = document.getElementByID('jenisBuku');
+    const StatusBuku = document.getElementByID('StatusBuku');
+    const optdipinjam = document.getElementByID('optdipinjam');
+
+    function cekJenis() {
+        if (jenisBuku.value === 'Refrensi') {
+            optdipinjam.disabled = true;
+            StatusBuku.value = 'tersedia';
+        } else {
+            optdipinjam.disabled = false;
+        }
+    }
+
+    window.onload = cekJenis();
+
+    jenisBuku.addEventListener('change', cekJenis)
+</script>
