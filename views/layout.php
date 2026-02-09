@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <title>Manajemen Mahasiswa</title>
+    <title>Manajemen Perpustakaan
+    </title>
 </head>
 
 <body><?= $content; ?></body>
