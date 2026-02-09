@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "Judul": "kamu",
+        "Penulis": "jaka",
+        "TahunTerbit": 2000,
+        "jenisBuku": "Referensi",
+        "StatusBuku": "dipinjam"
+    }
+]

@@ -7,7 +7,7 @@
 
     <select name="jenisBuku">
         <option <?= $dataByID['jenisBuku'] === "Biasa" ? "selected" : "" ?>>Biasa</option>
-        <option <?= $dataByID['jenisBuku'] === "Referensi" ? "selected" : "" ?>>Refrensi</option>
+        <option <?= $dataByID['jenisBuku'] === "Referensi" ? "selected" : "" ?>>Referensi</option>
     </select>
     <br /><br />
     <select name="StatusBuku">
@@ -25,7 +25,7 @@
     const optdipinjam = document.getElementByID('optdipinjam');
 
     function cekJenis() {
-        if (jenisBuku.value === 'Refrensi') {
+        if (jenisBuku.value === 'Referensi') {
             optdipinjam.disabled = true;
             StatusBuku.value = 'tersedia';
         } else {

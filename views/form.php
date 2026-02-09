@@ -6,7 +6,7 @@
     <input type="text" name="TahunTerbit" placeholder="Input Tahun Terbit" /> <br /><br />
     <select name="jenisBuku">
         <option>Biasa</option>
-        <option>Refrensi</option>
+        <option>Referensi</option>
     </select><br /><br />
     <select name="StatusBuku">
         <option>dipinjam</option>
